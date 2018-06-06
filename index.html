@@ -1,0 +1,61 @@
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <title> React Multicolor Slider Demo</title>
+  <style>
+    #container {
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      background-color: 'yellow';
+      font-size: 1.4vh;
+    }
+
+    #container p {
+      font-size: 12px;
+    }
+
+    ::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-button {
+    width: 6px;
+    height:2px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background: #ffffff;
+     -webkit-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: thin solid #dfdfdf;
+    border-radius: 10px;
+    background:#dfdfdf;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 3px #dfdfdf;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #dfdfdf;
+}
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css">
+  </link>
+
+</head>
+
+<body>
+  <div id="container"></div>
+  <script src="target/index.js"></script>
+</body>
+
+</html>
