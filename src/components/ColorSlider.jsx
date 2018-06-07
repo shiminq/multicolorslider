@@ -1,23 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Button} from 'react-bootstrap';
 
 export default class ColorSlider extends React.Component {
   constructor(props) {
     super(props);
+    const numOfSegments = this.props.thresholds.length - 1;
+    var isDraggingArray = [];
+    for (let i = 0; i < numOfSegments-1; i++) {
+      isDraggingArray[i] = false;
+    }
     this.state = {
       name: this.props.name,
       min: this.props.min,
       max: this.props.max,
       values: this.props.thresholds,
-      isDragging: [
-        false, false, false, false
-      ],
+      isDragging: isDraggingArray,
       colors: this.props.colors
     }
      // colors: ["red", "#FF9910", "#FFFB00", "#4BDD33", "blue"]
     this.segments = [];
-    this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
   componentDidMount() {
@@ -58,7 +59,7 @@ export default class ColorSlider extends React.Component {
     const isDrag = this.state.isDragging;
     isDrag[i] = false;
     this.setState({isDragging: isDrag});
-
+    this.props.onChange(this.state); //call back to pass back slider state
     e.stopPropagation();
     e.preventDefault();
   }
@@ -179,28 +180,22 @@ export default class ColorSlider extends React.Component {
     }
     return (
       <div >
-        <Button bsSize="big" bsStyle="info" style={{
-          padding: 0,
-          margin: 0
-        }}>
-          {this.state.name}
-        </Button>
         <div style={{
           fontWeight: 'normal',
           width: '100%'
         }}>
           <span style={{
-            userSelect: 'none', fontSize: '3vh'
+            userSelect: 'none', fontSize: '2vh'
           }}>{this.state.min}</span>
           <span style={{
             float: 'right',
-            userSelect: 'none', fontSize: '3vh'
+            userSelect: 'none', fontSize: '2vh'
           }}>{this.state.max}</span>
         </div>
         {colorSegments}
         <div style={{
           fontWeight: 'normal',
-          marginTop: 12, fontSize: '3vh'
+          marginTop: 12, fontSize: '2vh'
         }}>[{this.state.values.toString()}]</div>
       </div>
     );
