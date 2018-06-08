@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://shiminq.github.io/multicolorslider/">
-    <img alt="multicolorslider" src="https://github.com/shiminq/multicolorslider/blob/master/demo.JPG" width="280">
+    <img alt="multicolorslider" src="https://github.com/shiminq/multicolorslider/blob/master/demo.JPG" width="480">
   </a>
 </p>
 
