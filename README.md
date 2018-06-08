@@ -1,13 +1,14 @@
-<p align="center">
-  <a href="https://shiminq.github.io/multicolorslider/">
-    <img alt="multicolorslider" src="https://github.com/shiminq/multicolorslider/blob/master/demo.JPG" width="480">
-  </a>
-</p>
+
 
 # multicolorslider
 
 Multi-color slider implemented in ReactJS.  Configurable number of segments and colors! 
 
+<p align="center">
+  <a href="https://shiminq.github.io/multicolorslider/">
+    <img alt="multicolorslider" src="https://github.com/shiminq/multicolorslider/blob/master/demo.JPG" width="480">
+  </a>
+</p>
 
 ## Install
 ```sh
